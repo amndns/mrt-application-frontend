@@ -9,13 +9,42 @@ export class Main extends React.Component {
       direction: 0, // Represents the direction being South
       time: 0 // Represents the time at 5 AM
     };
+
+    this.changeStation = this.changeStation.bind(this);
+    this.changeDirection = this.changeDirection.bind(this);
+    this.changeTime = this.changeTime.bind(this);
+  }
+
+  changeStation(newStation) {
+    this.setState({
+      station: newStation
+    });
+  }
+
+  changeDirection(newDirection) {
+    this.setState({
+      direction: newDirection
+    });
+  }
+
+  changeTime(newTime) {
+    this.setState({
+      time: newTime
+    });
   }
 
   render() {
     return (
       <div>
-        <Query />
+        <Query
+          onChangeStation={this.changeStation}
+          onChangeDirection={this.changeDirection}
+          onChangeTime={this.changeTime} />
       </div>
     );
   }
 }
+
+// {this.state.station} <br />
+// {this.state.direction} <br />
+// {this.state.time}

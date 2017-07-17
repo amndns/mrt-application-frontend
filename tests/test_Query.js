@@ -50,3 +50,7 @@ describe('<Query />', () => {
     });
   });
 });
+
+// Look into how to do these: //
+
+// TODO: Simulate the selection of a dropdown and test if it changes the states of the Main component

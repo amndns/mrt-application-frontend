@@ -1,5 +1,6 @@
 import React from 'react'
 import { Query } from './Query'
+import { Result } from './Result'
 
 export class Main extends React.Component {
   constructor(props) {
@@ -40,6 +41,10 @@ export class Main extends React.Component {
           onChangeStation={this.changeStation}
           onChangeDirection={this.changeDirection}
           onChangeTime={this.changeTime} />
+        <Result
+          station={this.state.station}
+          direction={this.state.direction}
+          time={this.state.time} />
       </div>
     );
   }

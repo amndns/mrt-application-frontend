@@ -27,18 +27,24 @@ export class Query extends React.Component {
   }
 
   render() {
+    const htmlText = ['I am taking the MRT at', 'heading', 'at about'];
     return (
       <div>
+        {htmlText[0]}
         <Dropdown
           placeholder='North Avenue'
           search selection
           options={stations}
           onChange={this.handleChangeStation} />
+
+        {htmlText[1]}
         <Dropdown
           placeholder='South'
           search selection
           options={directions}
           onChange={this.handleChangeDirection} />
+
+        {htmlText[2]}
         <Dropdown
           placeholder='4 AM'
           search selection

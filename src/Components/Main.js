@@ -1,6 +1,8 @@
 import React from 'react'
+import { Container } from 'semantic-ui-react'
 import { Query } from './Query'
 import { Result } from './Result'
+import { Head } from './Head'
 
 export class Main extends React.Component {
   constructor(props) {
@@ -37,19 +39,28 @@ export class Main extends React.Component {
   render() {
     return (
       <div>
-        <Query
-          onChangeStation={this.changeStation}
-          onChangeDirection={this.changeDirection}
-          onChangeTime={this.changeTime} />
-        <Result
-          station={this.state.station}
-          direction={this.state.direction}
-          time={this.state.time} />
+        <Head />
+        <Container text>
+          <Query
+            onChangeStation={this.changeStation}
+            onChangeDirection={this.changeDirection}
+            onChangeTime={this.changeTime} />
+          <Result
+            station={this.state.station}
+            direction={this.state.direction}
+            time={this.state.time} />
+        </Container>
       </div>
     );
   }
 }
 
-// {this.state.station} <br />
-// {this.state.direction} <br />
-// {this.state.time}
+const styles = {
+  div: {
+    textAlign: 'center',
+  },
+  dropdown: {
+    marginRight: '12px',
+    marginLeft: '12px',
+  },
+};

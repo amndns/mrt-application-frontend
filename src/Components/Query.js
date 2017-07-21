@@ -29,28 +29,44 @@ export class Query extends React.Component {
   render() {
     const htmlText = ['I am taking the MRT at', 'heading', 'at about'];
     return (
-      <div>
+      <div style={styles.div}>
         {htmlText[0]}
         <Dropdown
           placeholder='North Avenue'
           search selection
           options={stations}
-          onChange={this.handleChangeStation} />
+          onChange={this.handleChangeStation}
+          style={styles.dropdown} />
+        <br /><br />
 
         {htmlText[1]}
         <Dropdown
           placeholder='South'
-          search selection
+          selection compact
           options={directions}
-          onChange={this.handleChangeDirection} />
+          onChange={this.handleChangeDirection}
+          style={styles.dropdown} />
 
         {htmlText[2]}
         <Dropdown
           placeholder='4 AM'
           search selection
           options={time}
-          onChange={this.handleChangeTime} />
+          onChange={this.handleChangeTime}
+          style={styles.dropdown} />
       </div>
     );
   }
 }
+
+const styles = {
+  div: {
+    textAlign: 'center',
+    marginTop: '50px',
+    marginBottom: '75px',
+  },
+  dropdown: {
+    marginRight: '12px',
+    marginLeft: '12px',
+  },
+};

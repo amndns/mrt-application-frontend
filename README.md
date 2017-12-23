@@ -7,13 +7,13 @@ Clone the repository and then navigate to the project folder.
 Install all npm dependencies:
 
 ```
-npm install
+$ npm install
 ```
 
 After this, you can now run the server:
 
 ```
-npm start
+$ npm start
 ```
 
 Go to http://localhost:8080/ to check if the server works correctly.
@@ -25,7 +25,7 @@ Lastly, have fun!
 For testing the test cases, run:
 
 ```
-npm test
+$ npm test
 ```
 
 ## Useful Links

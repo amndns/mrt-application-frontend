@@ -1,9 +1,33 @@
-## Instructions to run
-1. Navigate to folder */mrt-application-frontend*
-2. *NPM install*
-3. *NPM start*
-4. Navigate to localhost:8080
+# mrt-application-frontend
 
-## Instructions to test
-1. Navigate to folder */mrt-application-frontend*
-2. *NPM test*
+## Usage
+
+Clone the repository and then navigate to the project folder.
+
+Install all npm dependencies:
+
+```
+npm install
+```
+
+After this, you can now run the server:
+
+```
+npm start
+```
+
+Go to http://localhost:8080/ to check if the server works correctly.
+
+Lastly, have fun!
+
+## Testing
+
+For testing the test cases, run:
+
+```
+npm test
+```
+
+## Useful Links
+
+[React Documentation](https://reactjs.org/tutorial/tutorial.html)

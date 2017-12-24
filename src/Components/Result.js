@@ -25,18 +25,34 @@ export class Result extends React.Component {
   }
 
   render() {
-    return (
-      <Segment padded style={styles.segment}>
-        The minimum expected number of trains you will have to wait before you can ride is: <br /><Header color='grey'>{this.state.result}</Header>
-      </Segment>
-    );
+    if (this.state.result === 0) {
+      return (
+        <Segment padded style={styles.pos}>
+          You can ride immediately as soon as you arrive!
+        </Segment>
+      );
+    } else {
+      const word = this.state.result === 1 ? 'train' : 'trains'
+      return (
+        <Segment padded style={styles.neg}>
+          You will still have to wait for:<br />
+          <Header color='grey'>{this.state.result} {word}</Header>
+          to pass before you can ride.
+        </Segment>
+      );
+    }
   }
 }
 
 const styles = {
-  segment: {
+  pos: {
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 25,
+    color: 'grey'
+  },
+  neg: {
+    textAlign: 'center',
+    fontSize: 25,
     color: 'grey',
   },
   square: {
